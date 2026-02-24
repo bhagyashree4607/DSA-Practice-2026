@@ -121,3 +121,46 @@ Concept Used:
 
 --------------------------------------------------------------------------------------
 
+Day6:
+Problem:
+
+Find the maximum sum of a contiguous subarray in a given array (array may contain negative numbers).
+
+Approach:
+
+Used Kadane’s Algorithm.
+
+Maintained two variables:
+
+currentSum
+
+maxSum
+
+Traverse the array once.
+
+Add each element to currentSum.
+
+If currentSum becomes greater than maxSum, update maxSum.
+
+If currentSum becomes negative, reset it to 0.
+
+-If currentSum > maxSum:
+
+  Update maxSum
+
+-If currentSum < 0:
+
+  Reset currentSum = 0
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+Concept Used:
+
+Single pass traversal
+
+Greedy approach
+
+Kadane’s Algorithm
+
+Dynamic thinking
+------------------------------------------------------------------------------------
