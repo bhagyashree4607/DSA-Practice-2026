@@ -163,4 +163,80 @@ Greedy approach
 Kadane’s Algorithm
 
 Dynamic thinking
-------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------
+
+Day7:
+Problem:
+
+Given an array representing stock prices on different days, find the maximum profit that can be achieved by buying on one day and selling on a later day.
+
+If no profit is possible, return 0.
+
+Approach:
+Used a greedy approach.
+
+Maintained two variables:
+minPrice → stores minimum price seen so far.
+maxProfit → stores maximum profit found.
+Traverse the array once.
+If current price is less than minPrice, update minPrice.
+Calculate profit = current price − minPrice.
+If calculated profit is greater than maxProfit, update maxProfit.
+-If currentPrice < minPrice:
+  Update minPrice
+-Calculate profit = currentPrice − minPrice
+
+-If profit > maxProfit:
+  Update maxProfit
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+
+Concept Used:
+Single pass traversal
+
+Greedy algorithm
+
+Minimum value tracking
+
+Real-world stock optimization logic
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Day8:
+
+Problem:
+
+Given an array and multiple queries, find the sum of elements between index L and R (inclusive) efficiently.
+
+Approach:
+Used Prefix Sum technique for optimization.
+Created a new array prefix[] where:
+  prefix[i] stores sum of elements from index 0 to i.
+
+First element:
+  prefix[0] = arr[0]
+For remaining elements:
+  prefix[i] = prefix[i-1] + arr[i]
+For each query (L, R):
+  If L == 0 → Sum = prefix[R]
+  Else → Sum = prefix[R] − prefix[L-1]
+-Precompute prefix array in O(n)
+-Answer each query in O(1)
+
+Time Complexity:
+Building prefix array → O(n)
+Each query → O(1)
+Overall → O(n + q)
+
+Space Complexity:
+O(n)
+
+Concept Used:
+Precomputation
+Range query optimization
+Time complexity reduction
+Prefix Sum technique
+
+---------------------------------------------------------------------------------------------------------------------
