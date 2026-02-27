@@ -239,4 +239,35 @@ Range query optimization
 Time complexity reduction
 Prefix Sum technique
 
----------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+Day9:
+
+Problem:
+Given an array and an integer k, find the maximum sum of any contiguous subarray of size k.
+
+Approach:
+Used Sliding Window technique for optimization.
+First, calculated sum of first k elements (initial window).
+Stored it as windowSum.
+Set maxSum = windowSum.
+Then slid the window one element at a time:
+  Subtract element going out of window
+  Add new element coming into window
+Updated maxSum whenever a larger sum was found.
+-Initial window sum calculated in O(k)
+-For each step:
+  windowSum = windowSum − arr[i − k] + arr[i]
+-Update maxSum if windowSum > maxSum
+
+Time Complexity:
+O(n)
+
+Space Complexity:
+O(1)
+
+Concept Used:
+Sliding Window Technique
+Optimization from O(n × k) to O(n)
+Contiguous subarray logic
+Efficient window shifting
