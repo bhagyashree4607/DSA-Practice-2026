@@ -271,3 +271,50 @@ Sliding Window Technique
 Optimization from O(n × k) to O(n)
 Contiguous subarray logic
 Efficient window shifting
+
+-----------------------------------------------------------------------------------------------
+
+Day10:
+
+Problem:
+Given an array of positive integers and a target sum S, find the length of the longest contiguous subarray whose sum equals S.
+
+Approach:
+Used Sliding Window (Two Pointer Technique).
+
+Maintained two pointers:
+  left → start of window
+  right → end of window
+Added elements while expanding window.
+If sum becomes greater than target:
+  Shrink window from left side.
+If sum equals target:
+  Update maximum length.
+
+Key Logic:
+Expand window → sum += arr[right]
+While sum > target:
+  sum -= arr[left]
+  left++
+If sum == target:
+  maxLength = max(maxLength, right - left + 1)
+
+Time Complexity:
+O(n)
+Each element is added and removed at most once.
+
+Space Complexity:
+O(1)
+Only variables are used, no extra data structure.
+
+Concept Used:
+Sliding Window
+Two Pointer Technique
+Contiguous Subarray
+Window Shrinking & Expanding
+
+Important Note:
+This approach works only for positive integers.
+If negative numbers are present, we need Prefix Sum + HashMap approach.
+
+-----------------------------------------------------------------------------------------------
