@@ -318,3 +318,43 @@ This approach works only for positive integers.
 If negative numbers are present, we need Prefix Sum + HashMap approach.
 
 -----------------------------------------------------------------------------------------------
+
+Day11:
+
+Problem:
+Check if a subarray with a given sum exists in an array containing positive and negative integers.
+
+Approach:
+Used Prefix Sum + HashSet.
+Maintained a running prefixSum.
+Traversed the array once.
+
+If prefixSum == target, subarray exists.
+Checked if (prefixSum - target) is already present in HashSet.
+If yes, subarray exists.
+Otherwise, stored current prefixSum in HashSet.
+
+-For each element:
+  prefixSum += arr[i]
+
+-If prefixSum == target:
+  Return true
+
+-If (prefixSum − target) exists in set:
+  Return true
+-Add prefixSum to HashSet
+
+Time Complexity:
+O(n)
+
+Space Complexity:
+O(n)
+
+Concept Used:
+Prefix Sum
+HashSet
+Subarray logic
+Handling negative numbers
+O(1) lookup optimization
+
+---------------------------------------------------------------------------------------
