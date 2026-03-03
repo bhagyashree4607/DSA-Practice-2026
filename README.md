@@ -358,3 +358,46 @@ Handling negative numbers
 O(1) lookup optimization
 
 ---------------------------------------------------------------------------------------
+
+Day12:
+
+Problem:
+Find the maximum profit from buying and selling a stock once.
+
+You must:
+Buy before selling
+Perform only one transaction
+
+Approach:
+Used Greedy technique.
+Maintained minPrice to track lowest price so far.
+
+For each day:
+Calculated profit = currentPrice − minPrice.
+Updated maxProfit if profit is higher.
+Updated minPrice if current price is smaller.
+Traversed array only once.
+
+-For each price:
+  If price < minPrice → update minPrice
+  profit = price − minPrice
+  If profit > maxProfit → update maxProfit
+
+Time Complexity:
+O(n)
+
+Space Complexity:
+O(1)
+
+Concept Used:
+Greedy Algorithm
+Single Pass Optimization
+Real-world problem solving
+Interview Pattern Recognition
+
+Learning Outcome:
+How to reduce O(n²) brute force to O(n)
+How to track minimum dynamically
+How companies test optimization thinking
+
+------------------------------------------------------------------------------------------------
