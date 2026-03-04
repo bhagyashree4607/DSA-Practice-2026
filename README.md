@@ -401,3 +401,35 @@ How to track minimum dynamically
 How companies test optimization thinking
 
 ------------------------------------------------------------------------------------------------
+
+Day13:
+
+Problem:
+Return an array where each element is the product of all other elements except itself. Division is not allowed.
+
+Approach:
+Stored left product in result array.
+Traversed from left to right.
+Then maintained rightProduct variable.
+Traversed from right to left.
+Multiplied left and right products.
+
+-Step 1:
+  result[i] = product of elements before i
+-Step 2:
+  result[i] *= rightProduct
+  Update rightProduct
+
+Time Complexity:
+O(n)
+
+Space Complexity:
+O(1) (excluding output array)
+
+Concept Used:
+Prefix product
+Backward traversal
+Space optimization
+Interview-level array logic
+
+---------------------------------------------------------------------------------------------
