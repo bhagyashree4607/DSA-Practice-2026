@@ -433,3 +433,44 @@ Space optimization
 Interview-level array logic
 
 ---------------------------------------------------------------------------------------------
+
+Day14:
+
+Problem:
+Given an array representing bar heights, calculate the amount of rainwater that can be trapped.
+
+Approach:
+- Used Two Pointer technique.
+- Maintained left and right pointers.
+- Tracked leftMax and rightMax heights.
+- Water trapped is calculated using:
+  
+  min(leftMax, rightMax) - current height
+
+- Updated pointers accordingly.
+
+-If height[left] < height[right]:
+
+    Check leftMax
+    Add trapped water
+    Move left pointer
+
+-Else:
+
+    Check rightMax
+    Add trapped water
+    Move right pointer
+
+Time Complexity:
+O(n)
+
+Space Complexity:
+O(1)
+
+Concept Used:
+- Two Pointer Technique
+- Prefix Max / Suffix Max concept
+- Optimization from O(n²) to O(n)
+- Real-world water trapping logic
+
+----------------------------------------------------------------------------------------
